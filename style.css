@@ -1,0 +1,351 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position:relative;
+    font-family: sans-serif;
+    background: #dfd9d9;
+}
+
+header{
+    position: relative;
+    width: 75%;
+    height: 750px;
+    border: 2px solid #fff;
+    margin: 30px auto 0px auto;
+    border-radius: 20px 20px 0px 0px;
+    background: #54a97e;
+}
+
+header .iso{
+    position: absolute;
+    display: flex;
+    top: 15px;
+    left: 15px;
+
+}
+header .iso h6{
+    width: 10px;
+    height: 10px;
+    background: #ff7461;
+    margin-left: 5px;
+    border-radius: 50%;
+}
+header .iso h6:nth-child(2){
+    background: #ffd74d;
+}
+
+header .iso h6:nth-child(3){
+    background: #81d69f;
+}
+header nav{
+    width: 75%;
+    height: 40px;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav .logo{
+    font-family: sans-serif;
+}
+header nav .logo span{
+    color: #d31b27;
+}
+
+header nav ul{
+    display: flex;
+    align-items: center;
+    
+}
+header nav ul li{
+    list-style-type: none;
+    padding: 5px 10px;
+}
+header nav ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+    transition: .3s ease-in-out;
+}
+
+header nav ul li:nth-child(1) a{
+    color: #d31b27;
+}
+header nav ul li a:hover{
+    color: #d31b27;
+}
+header nav .sign_cart{
+    display: flex;
+    align-items: center;
+}
+header nav .sign_cart a{
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 15px;
+    transition: .3s linear;
+    overflow: hidden;
+}
+
+header nav .sign_cart a{
+    background: #d31b27;
+    padding: 8px 25px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: .3s linear;
+}
+
+/* utilities classes start*/
+.btn::before{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: #d31b27;
+    border-radius: 20px;
+    top: 0;
+    right: 0;
+    transition: .3s linear;
+}
+.btn:hover::before{
+    width: 100%;
+    left: 0;
+}
+/*utilities classe ends*/
+header nav .sign_cart h6{
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #d31b27;
+    top: 5%;
+    right: 25%;
+    border-radius: 50%;
+    transition: .4s ease-in-out;
+}
+header nav .sign_cart #cart:hover h6{
+    background: #ffd74d;
+    filter: hue-rotate(360deg);
+}
+
+header section{
+    width: 75%;
+    height: 350px;
+    
+    margin: auto;
+    display: flex;
+}
+header section .cont_box, .img_box{
+    position: relative;
+    width: 45%;
+    height: 100%;
+    
+}
+header section .img_box{
+    width: 55%;
+}
+
+header section .cont_box h2{
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+    word-spacing: 10px;
+}
+header section .cont_box .btns{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+header section .cont_box .btns a{
+    position: relative;
+    padding: 10px 20px;
+    background: #d31b27;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 20px;
+    margin-right: 10px;
+    transition: .3s linear;
+    overflow: hidden;
+
+}
+header section .cont_box .btns a:nth-child(2){
+    background: #fff;
+    color: #000;
+}
+header section .cont_box .btns a:hover{
+    background: none;
+    
+}
+header section .cont_box .review{
+    margin-top: 30px;
+    font-size: 20px;
+    
+}
+header section .cont_box .review .card{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    cursor: pointer;
+}
+header section .cont_box .review .card .user{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 13px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    transition: all .4s linear;
+    
+}
+header section .cont_box .review .card .user img{
+    width: 100%;
+    height: 100%;
+}
+header section .cont_box .review .star{
+    color: #feaa09;
+    font-size: 11px;
+}    
+header section .img_box .main_food_head{
+    position: relative;
+    width: 370px;
+    height: 345px;
+    animation: food 2s linear infinite;
+}
+@keyframes food{
+    0%, 100%{
+        top: 15px;
+    }
+    50%{
+        top: -5px;
+    }
+}
+header section .img_box .discount{
+    position: absolute;
+    width: 170px;
+    height: 45px;
+    /*background: greenyellow;*/
+    top: 10px;
+    border-radius: 15px;
+    z-index: 2;
+}
+header section .img_box .discount::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(184, 184, 184, .15);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+
+}
+header section .img_box .discount h3{
+    padding: 5px 0px 5px 20px;
+}
+header section .img_box .discount h5{
+    padding: 0px 0px 5px 20px;
+}
+header section .img_box .discount h5 span{
+    color: #d31b27;
+}
+header .food_card{
+    position: relative;
+    width: 90%;
+    height: 270px;
+    margin: auto;
+}
+header .food_card .card_box{
+    width: 90%;
+    height: 270px;
+    
+    margin: auto;
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+header .food_card .card_box::-webkit-scrollbar{
+    display: none;
+}
+header .food_card .card_box .card{
+    position: relative;
+    min-width: 160px;
+    height: 220px;
+    border-radius: 50px;
+    margin-top: 15px;
+    background: linear-gradient(145deg, #508e6a, #549672);
+    box-shadow:  20px 20px 60px #5c9e77,
+             -20px -20px 60px #55946a;
+             margin-right: 20px;
+             cursor: pointer;
+}
+header .food_card .card_box .card .card_main_img{
+    position: absolute;
+    width: 160px;
+    height: 70%;
+    padding: 10px;
+    border-radius: 30%;
+    transition: .8s linear;
+}
+header .food_card .card_box .card:hover .card_main_img{
+    transform: rotate(360deg);
+}
+header .food_card .card_box .card .cart_c{
+    position: absolute;
+    width: 25px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #d31b27;
+    height: 35px;
+    background: #000;
+    border-radius: 10px 10px 30px 10px;
+    transition: .3s linear;
+}
+header .food_card .card_box .card .content{
+    margin-top: 160px;
+    padding-left: 30px;
+
+}
+header .food_card .card_box .card .content h3{
+    font-size: 15px;
+
+}
+header .food_card .card_box .card .content h5{
+    font-size: 11px;
+    color: #000;
+}
+header .food_card .card_box .card .content .price{
+    margin-top: 55px;
+    font-weight: 800;
+}
+header .food_card .left_arrow{
+    position: absolute;
+    top: 55%;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header .food_card .left_arrow:hover{
+    background: #d31b27;
+}
+header .food_card .left_arrow:nth-child(2){
+    left: 95%;
+    transform: rotate(180deg);
+}
+
